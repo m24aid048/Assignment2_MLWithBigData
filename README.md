@@ -1,5 +1,6 @@
-# Assignment2_MLWithBigData
-
+# Assignment2_CSL7110
+By: **Shashi Saurav** (M24AID048)
+GitHub Link: - https://github.com/m24aid048/Assignment2_MLWithBigData.git
 
 **What were the Jaccard similarities, MinHash approximations, and LSH performance on the document datasets?**
     *   **Jaccard Similarities (char 3-grams)**: D1-D2 (0.978), D1-D3 (0.580), D1-D4 (0.305), D2-D3 (0.568), D2-D4 (0.306), D3-D4 (0.312).
