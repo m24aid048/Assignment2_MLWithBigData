@@ -1,12 +1,12 @@
 # Assignment2_MLWithBigData
 
 
-1.  **What were the Jaccard similarities, MinHash approximations, and LSH performance on the document datasets?**
+**What were the Jaccard similarities, MinHash approximations, and LSH performance on the document datasets?**
     *   **Jaccard Similarities (char 3-grams)**: D1-D2 (0.978), D1-D3 (0.580), D1-D4 (0.305), D2-D3 (0.568), D2-D4 (0.306), D3-D4 (0.312).
     *   **MinHash Approximations (D1-D2, char 3-grams)**: Varied from 0.95 (t=20) to 1.0 (t=60). The approximate Jaccard similarity for D1-D2 with t=600 was 0.9783, very close to the exact Jaccard of 0.978. Experiments for best `t` found average similarities ranging from 0.982 to 0.992 for `t` values between 50 and 800.
     *   **LSH Performance (char 3-grams)**: Using `r=5, b=32`, the LSH probability for ('D1', 'D2') (similarity 0.978) was 1.0, and for ('D1', 'D3') (similarity 0.5804) it was 0.8869, indicating a high likelihood of collision for similar pairs. Lower similarity pairs like ('D1', 'D4') (0.3051) had a much lower collision probability of 0.0812.
 
-2.  **What were the Jaccard similarities, MinHash approximations, and LSH performance on the MovieLens dataset?**
+**What were the Jaccard similarities, MinHash approximations, and LSH performance on the MovieLens dataset?**
     *   **Exact Jaccard Similarities**: 10 user pairs had an exact Jaccard similarity $\geq0.5$. When the threshold was raised to $\geq0.8$, there were 0 exact similar pairs.
     *   **MinHash Approximations**: For a similarity threshold of 0.5, MinHash with `t=50` found 0 approximate pairs, resulting in 10 false negatives. With `t=100`, it found 0 pairs and 10 false negatives. With `t=200`, it also found 0 pairs and 10 false negatives. This suggests that `t` values of up to 200 were insufficient to reliably detect pairs with 0.5 similarity using MinHash for this dataset.
     *   **LSH Performance (MovieLens)**:
